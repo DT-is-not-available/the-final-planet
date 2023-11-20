@@ -1,0 +1,39 @@
+{
+    "name": "backgroundOnly",
+    "goals": [],
+    "startGoal": "",
+    "worlds": [
+        {
+            "rect": {
+                "x": 9999,
+                "y": 160,
+                "width": 20,
+                "height": 3
+            },
+            "seed": 1000,
+            "worldResources": [],
+            "buildingStacks": [],
+            "citizens": [
+                {
+                    "amount": 0,
+                    "ageRangeMin": 60,
+                    "ageRangeMax": 64,
+                    "minX": 60,
+                    "maxX": 80
+                }
+            ]
+        }
+    ],
+    "initialMaterials": {
+        "food": 0,
+        "stone": 0,
+        "wood": 0,
+        "knowledge": 0,
+        "machineParts": 0,
+        "refinedMetal": 0,
+        "computerChips": 0
+    },
+    "viewYFromBottom": 270,
+    "viewYMobi": 240,
+    "backgroundSprites": []
+}
