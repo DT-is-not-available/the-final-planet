@@ -90,6 +90,36 @@ const newproto = {
         PLANET_OMFG_NO_WAY_ITS_THE_PLANET_FROM_THE_FINAL_PLANET_MOD.scale.y = 2
         this.state.bgCity.outerStage.addChild(PLANET_OMFG_NO_WAY_ITS_THE_PLANET_FROM_THE_FINAL_PLANET_MOD)
         this.state.planetimg = PLANET_OMFG_NO_WAY_ITS_THE_PLANET_FROM_THE_FINAL_PLANET_MOD
+
+        // github icon
+        var githubButtonImage = Resources.getTexture("spr_github_icon");
+        var githubButtonSprite = new PIXI.Sprite(githubButtonImage);
+        const _gthis = this.state
+        const game = this
+        this.state.githubButton = { theSprite : githubButtonSprite, onClick : function() {
+        }, onHover : function() {
+            _gthis.gui.tooltip.setText(_gthis.creditsButton,"The Final Planet on GitHub");
+            game.setOnClickTo = function() {
+                window.open("https://github.com/DT-is-not-available/the-final-planet","_blank");
+            };
+        }};
+        this.state.bottomButtonStage.addChild(this.state.githubButton.theSprite);
+        this.state.otherButtons.push(this.state.githubButton);
+        const oldposel = menu.positionUIElements
+        menu.positionUIElements = function(...a) {
+            oldposel.call(menu, ...a)
+            try {
+                var yPosSmallButtons = game.rect.height - 24 - this.gui.safeAreaBottom;
+                var offset = 176 + this.gui.safeAreaLeft;
+                var yOffset = 0;
+                var _this_x = offset;
+                var _this_y = yPosSmallButtons + yOffset;
+                var tmp = new PIXI.Point(_this_x,_this_y);
+                this.githubButton.theSprite.position = tmp;
+            } catch (e) {
+                alert(e)
+            }
+        }
     },
     // copied from code
     update(timeMod) {
