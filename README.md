@@ -8,12 +8,14 @@ if you want you can improve or change the calculations to make them simpler or m
 ## Current Goals/Things To Work On
 - planet drawing algorithm (spr_planet_template can be used as placeholder till this is done)
 - background drawing recreation
-- stage panning and zooming
+- stage panning and zooming**
 - city building ui
 - replace the save and load lists with ones specific to planet mod because typical save files simply wont work on circular
-- positioning on planets and how will that work
-- citizen physics
-- the actual building/deleting tile system on the planets (pain)
+- positioning on planets and how will that work**
+- citizen physics**
+- the actual building/deleting tile system on the planets (pain)**
 - building class integration (rather than recreating each building individually, create a wrapper to be used in the planet mod that works for all buildings, dont ask how area/neighbor effects are gonna work)
 
 these are all things that need to be done before its in a decent playable state. this is why i didnt want to do this by myself
+
+\*\* make a plan preferably in a markdown file on how to do this before you get started
