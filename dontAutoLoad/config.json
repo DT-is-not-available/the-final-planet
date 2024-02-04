@@ -1,0 +1,7 @@
+{
+    "name": "The Final Planet",
+    "author": "DT",
+    "description": "A mod that changes the worlds to be completely round",
+    "entrypoint": "main.js",
+    "version": 1
+}
